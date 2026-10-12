@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad · A Tiempo</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<style>
+@font-face { font-family: "Bricolage Grotesque"; font-weight: 800; font-display: swap; src: url("/fonts/bricolage-grotesque-latin-800-normal.woff2") format("woff2"); }
+@font-face { font-family: "Bricolage Grotesque"; font-weight: 600; font-display: swap; src: url("/fonts/bricolage-grotesque-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Atkinson Hyperlegible"; font-weight: 400; font-display: swap; src: url("/fonts/atkinson-hyperlegible-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Atkinson Hyperlegible"; font-weight: 700; font-display: swap; src: url("/fonts/atkinson-hyperlegible-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "IBM Plex Mono"; font-weight: 400; font-display: swap; src: url("/fonts/ibm-plex-mono-latin-400-normal.woff2") format("woff2"); }
+:root {
+  --paper: #f6f7f9; --sheet: #ffffff; --ink: #131a26; --muted: #586273; --line: #d9dee6; --accent: #2f2ac4; --radius: 4px;
+  --display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --body: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 1.0625rem; line-height: 1.65; padding-inline: 20px; padding-block: 0 56px; -webkit-font-smoothing: antialiased; }
+a { color: var(--accent); text-underline-offset: 3px; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+.top { max-width: 1040px; margin: 0 auto; height: 68px; display: flex; align-items: center; border-bottom: 2px solid var(--ink); }
+.brand { display: inline-flex; align-items: center; gap: 10px; font-family: var(--display); font-weight: 800; font-size: 1.3rem; color: var(--ink); text-decoration: none; }
+.brand svg { width: 26px; height: 26px; }
+main { max-width: 68ch; margin: 0 auto; padding-top: 48px; display: grid; gap: 32px; }
+h1 { font-family: var(--display); font-weight: 800; font-size: clamp(2.1rem, 6vw, 3rem); line-height: 1; letter-spacing: -.02em; margin: 0; }
+.meta { font-family: var(--mono); font-size: .8rem; color: var(--muted); margin: 10px 0 0; }
+.summary { background: var(--sheet); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px; margin: 0; display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 10px 16px; }
+.summary dt { font-weight: 700; }
+.summary dd { margin: 0; min-width: 0; }
+@media (max-width: 520px) { .summary { grid-template-columns: 1fr; gap: 2px; } .summary dd { margin-bottom: 10px; } }
+section { border-top: 1px solid var(--line); padding-top: 20px; }
+h2 { font-family: var(--display); font-weight: 600; font-size: 1.3rem; margin: 0 0 8px; }
+section p, section ul { margin: 0 0 10px; }
+section ul { padding-left: 1.2rem; display: grid; gap: 6px; }
+.addr { font-family: var(--mono); font-size: .95em; user-select: all; overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="/"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="3" width="26" height="26" rx="3" fill="none" stroke="#2f2ac4" stroke-width="3" transform="rotate(-4 16 16)"/><path d="M10 16.5l4.2 4.2L22.5 11.5" fill="none" stroke="#2f2ac4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>A Tiempo</a>
+</header>
+<main>
+  <div>
+    <h1>Política de privacidad</h1>
+    <p class="meta">Última actualización: 12 de octubre de 2026</p>
+  </div>
+
+  <dl class="summary" aria-label="Resumen">
+    <dt>Responsable</dt><dd>Cris Villarreal García</dd>
+    <dt>Contacto</dt><dd><span class="addr">crisvillarrealgarcia@gmail.com</span></dd>
+    <dt>Para qué</dt><dd>Gestionar la lista de espera de A Tiempo y enviarte avisos sobre ayudas al alquiler de tu comunidad.</dd>
+    <dt>Base legal</dt><dd>Tu consentimiento, que puedes retirar cuando quieras.</dd>
+    <dt>Quién más los trata</dt><dd>MailerLite, que gestiona la lista y los envíos con datos en la UE, y Vercel, que aloja la web. No se ceden a nadie más.</dd>
+    <dt>Tus derechos</dt><dd>Acceder, corregir, borrar, oponerte, limitar el uso, llevarte tus datos y reclamar ante la AEPD.</dd>
+  </dl>
+
+  <section>
+    <h2>1. Quién es la responsable</h2>
+    <p>La responsable del tratamiento es Cris Villarreal García, persona física que desarrolla el proyecto A Tiempo. Para cualquier cuestión sobre tus datos, escribe a <span class="addr">crisvillarrealgarcia@gmail.com</span>.</p>
+  </section>
+
+  <section>
+    <h2>2. Qué datos tratamos</h2>
+    <ul>
+      <li>Tu correo electrónico.</li>
+      <li>La comunidad autónoma que eliges, para enviarte solo los avisos que te afectan.</li>
+      <li>Los datos que MailerLite guarda como prueba de tu consentimiento: fecha y hora del alta y de la confirmación, y la dirección IP desde la que te apuntaste.</li>
+    </ul>
+    <p>No pedimos tu nombre, tu DNI, tus ingresos ni ningún otro dato.</p>
+  </section>
+
+  <section>
+    <h2>3. Para qué los usamos</h2>
+    <ul>
+      <li>Avisarte cuando A Tiempo esté disponible.</li>
+      <li>Enviarte avisos sobre convocatorias de ayudas al alquiler para jóvenes en tu comunidad.</li>
+    </ul>
+    <p>No hacemos perfiles, no tomamos decisiones automatizadas sobre ti y no usamos tus datos para publicidad de terceros.</p>
+  </section>
+
+  <section>
+    <h2>4. Base legal</h2>
+    <p>Tratamos tus datos porque nos das tu consentimiento al marcar la casilla del formulario (artículo 6.1.a del Reglamento General de Protección de Datos). Puedes retirarlo en cualquier momento con el enlace de baja de cada correo o escribiéndonos. Retirarlo no afecta a los envíos anteriores.</p>
+  </section>
+
+  <section>
+    <h2>5. Cuánto tiempo los guardamos</h2>
+    <p>Hasta que te des de baja. Si A Tiempo no llega a lanzarse, borraremos la lista de espera como máximo 12 meses después de que te apuntes.</p>
+  </section>
+
+  <section>
+    <h2>6. Quién más accede a tus datos</h2>
+    <p>No vendemos ni cedemos tus datos. Para funcionar usamos estos proveedores, que actúan como encargados del tratamiento y solo pueden usar los datos para prestarnos su servicio:</p>
+    <ul>
+      <li><b>MailerLite</b> (MailerLite Limited, Irlanda) guarda la lista de espera y envía los correos. Los datos se tratan en la Unión Europea.</li>
+      <li><b>Vercel</b> (Vercel Inc., Estados Unidos) aloja esta web y mide las visitas de forma agregada y anónima, sin cookies. No recibe tu correo. Vercel está certificada en el Marco de Privacidad de Datos UE-EE. UU., que permite estas transferencias.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>7. Tus derechos</h2>
+    <p>Puedes pedir en cualquier momento acceder a tus datos, corregirlos, borrarlos, oponerte a su uso, limitarlo o recibirlos en un formato que puedas llevar a otro servicio. Escribe a <span class="addr">crisvillarrealgarcia@gmail.com</span> con lo que necesites y te responderemos en un mes como máximo.</p>
+    <p>Si crees que no hemos tratado bien tus datos, puedes reclamar ante la Agencia Española de Protección de Datos en <a href="https://www.aepd.es" target="_blank" rel="noopener">www.aepd.es</a>.</p>
+  </section>
+
+  <section>
+    <h2>8. Cookies</h2>
+    <p>Esta web no usa cookies. Las fuentes tipográficas están alojadas en la propia web, y la medición de visitas de Vercel funciona sin cookies y sin identificarte.</p>
+  </section>
+
+  <section>
+    <h2>9. Edad</h2>
+    <p>A Tiempo está pensado para personas de 18 a 35 años. Si eres menor de edad, no te apuntes.</p>
+  </section>
+
+  <section>
+    <h2>10. Cambios</h2>
+    <p>Si cambiamos esta política, actualizaremos la fecha de arriba y, si el cambio te afecta, te avisaremos por correo antes de aplicarlo.</p>
+  </section>
+
+  <p><a href="/">Volver a A Tiempo</a></p>
+</main>
+</body>
+</html>
