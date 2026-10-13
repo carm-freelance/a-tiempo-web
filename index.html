@@ -175,7 +175,9 @@ h2 { font-family: var(--display); font-weight: 800; font-size: clamp(1.8rem, 3.8
 .docs { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 .docs li { display: grid; grid-template-columns: 18px 1fr; gap: 10px; align-items: start; }
 .docs li::before { content: ""; width: 14px; height: 14px; margin-top: 4px; border: 1.5px solid var(--ink); border-radius: 2px; }
-.mail-cta { display: inline-block; font-weight: 700; font-size: .92rem; color: #fff; background: var(--ink); padding: 10px 14px; border-radius: var(--radius); text-decoration: none; justify-self: start; }
+.mail-cta { display: inline-block; font-weight: 700; font-size: .92rem; color: #fff; background: var(--ink); padding: 10px 14px; border-radius: var(--radius); text-decoration: none; justify-self: start; transition: transform 160ms var(--ease-out), background-color 160ms ease; }
+.mail-cta:active { transform: scale(.97); }
+@media (hover: hover) and (pointer: fine) { .mail-cta:hover { background: #2a3445; } }
 .example-tag { font-family: var(--mono); font-size: .74rem; color: var(--muted); margin: 10px 0 0; }
 
 /* Lo que no hace */
@@ -331,7 +333,7 @@ footer p { margin: 0; }
               <li>Documento de tu cuenta bancaria</li>
               <li>Certificado digital o Cl@ve permanente</li>
             </ul>
-            <span class="mail-cta" aria-hidden="true">Ver la convocatoria oficial</span>
+            <a class="mail-cta" href="https://habitatge.gva.es/es/web/vivienda-y-calidad-en-la-edificacion" target="_blank" rel="noopener">Ver la convocatoria oficial</a>
           </div>
         </article>
         <p class="example-tag">Ejemplo con la convocatoria valenciana de 2026 (DOGV nº 10434).</p>
@@ -400,7 +402,7 @@ document.documentElement.classList.add("js");
 
 // Pega aquí la URL del atributo "action" del formulario embebido de MailerLite.
 // Tiene esta forma: https://assets.mailerlite.com/jsonp/<cuenta>/forms/<formulario>/subscribe
-const MAILERLITE_ACTION = "";
+const MAILERLITE_ACTION = "https://assets.mailerlite.com/jsonp/2708550/forms/201207028442466001/subscribe";
 
 (function () {
   const form = document.getElementById("lista");
@@ -432,10 +434,8 @@ const MAILERLITE_ACTION = "";
 
     btn.disabled = true; btn.classList.add("busy"); say("");
     try {
-      let res = null;
-      try { res = await fetch(MAILERLITE_ACTION, { method: "POST", body: data }); }
-      catch { await fetch(MAILERLITE_ACTION, { method: "POST", body: data, mode: "no-cors" }); }
-      if (res && !res.ok) throw new Error("http " + res.status);
+      // MailerLite no deja leer la respuesta desde otra web, así que se envía sin leerla.
+      await fetch(MAILERLITE_ACTION, { method: "POST", body: data, mode: "no-cors" });
       document.getElementById("form-fields").hidden = true;
       document.getElementById("done").hidden = false;
     } catch {
